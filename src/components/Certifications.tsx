@@ -8,43 +8,72 @@ export default function Certifications() {
     >
       <div className="section-container">
 
-        <header className="section-heading certifications-heading">
-          <span className="section-number lavender">05</span>
+        {/* =====================================================
+            HEADER
+        ====================================================== */}
 
-          <div>
-            <p className="section-kicker">CONTINUOUS LEARNING</p>
-            <h2>Certifications</h2>
+        <header className="section-heading certifications-heading">
+
+          <div className="section-heading-meta">
+
+            <span className="section-number lavender">
+              05
+            </span>
+
+            <p className="section-kicker">
+              CONTINUOUS LEARNING
+            </p>
+
+          </div>
+
+
+          <div className="certifications-heading-content">
+
+            <h2>
+              Certifications
+              <span className="heading-accent">.</span>
+            </h2>
 
             <p className="section-intro">
               Structured learning across data science,
               machine learning and generative AI.
             </p>
+
           </div>
+
         </header>
 
+
+        {/* =====================================================
+            CERTIFICATION LIST
+        ====================================================== */}
+
         <div className="certifications-list">
+
           {certifications.map((cert, index) => {
+
             const number = String(index + 1).padStart(2, "0");
 
             return (
+
               <article
                 className={`certification-item cert-${index + 1}`}
                 key={cert.title}
               >
-                {/* giant background number */}
-                <span
-                  className="cert-ghost-number"
-                  aria-hidden="true"
-                >
-                  {number}
-                </span>
+
+                {/* Number */}
 
                 <div className="cert-number">
                   {number}
                 </div>
 
+
+                {/* Main information */}
+
                 <div className="cert-content">
+
                   <div className="cert-top">
+
                     <span className="cert-label">
                       {index === 1
                         ? "COURSEWORK"
@@ -52,12 +81,20 @@ export default function Certifications() {
                     </span>
 
                     <span className="cert-dot" />
+
                   </div>
 
-                  <h3>{cert.title}</h3>
+
+                  <h3>
+                    {cert.title}
+                  </h3>
+
 
                   <div className="cert-meta">
-                    <span>{cert.issuer}</span>
+
+                    <span>
+                      {cert.issuer}
+                    </span>
 
                     <span className="cert-divider" />
 
@@ -66,33 +103,55 @@ export default function Certifications() {
                         ? "Independent Learning"
                         : "Credential Earned"}
                     </span>
+
                   </div>
+
                 </div>
 
+
+                {/* Action */}
+
                 <div className="cert-action">
+
                   {cert.link ? (
+
                     <a
                       href={cert.link}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      View Certificate
-                      <span>↗</span>
+                      <span>
+                        View Certificate
+                      </span>
+
+                      <span aria-hidden="true">
+                        ↗
+                      </span>
                     </a>
+
                   ) : (
+
                     <span className="cert-completed">
                       Completed
                     </span>
+
                   )}
+
                 </div>
+
+
+                {/* Accent */}
 
                 <div
                   className="cert-accent-line"
                   aria-hidden="true"
                 />
+
               </article>
+
             );
           })}
+
         </div>
 
       </div>

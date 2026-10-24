@@ -2,112 +2,97 @@ export default function Education() {
   return (
     <section className="section education" id="education">
       <div className="section-container">
-
-        <header className="section-heading education-heading">
-          <span className="section-number">01</span>
+        <header className="section-heading">
+          <div className="section-heading-meta">
+            <span className="section-number coral">01</span>
+            <p className="section-kicker">FOUNDATION</p>
+          </div>
 
           <div>
-            <p className="section-kicker">FOUNDATION</p>
-            <h2>Education</h2>
+            <h2>Education<span className="heading-accent">.</span></h2>
+            <p className="section-intro">
+              Building a strong foundation in computer science, software
+              engineering and intelligent systems.
+            </p>
           </div>
         </header>
 
         <div className="education-record">
-
-          {/* LEFT — DEGREE */}
           <div className="education-main">
             <span className="record-label">DEGREE</span>
 
             <h3>
               B.Tech in Computer Science
               <br />
-              & Engineering
+              &amp; Engineering
             </h3>
 
-            <p className="education-description">
-              Building a foundation across computer science,
-              artificial intelligence and software engineering.
+            <p>
+              Building a foundation across computer science, artificial
+              intelligence and software engineering.
             </p>
 
             <div className="education-focus">
               <span>DSA</span>
-              <span>OOPs</span>
-              <span>Computer Network</span>
+              <span>OOP</span>
+              <span>Computer Networks</span>
               <span>DBMS</span>
             </div>
           </div>
 
-          {/* RIGHT — ACADEMIC PROFILE */}
-          <div className="education-profile">
-
-            <span className="education-ghost" aria-hidden="true">
-              27
-            </span>
-
+          <aside className="education-profile">
             <div className="education-profile-top">
-              <span className="record-label">
-                ACADEMIC PROFILE
-              </span>
-
               <span className="education-status">
                 <i />
-                IN PROGRESS
+                ACADEMIC PROFILE
               </span>
+              <span>IN PROGRESS</span>
             </div>
 
             <div className="education-university">
-              <span className="record-label">UNIVERSITY</span>
-
-              <p>
-                IKG Punjab Technical
-                <br />
-                University
-              </p>
+              <small>UNIVERSITY</small>
+              <p>IKG Punjab Technical University</p>
             </div>
 
             <div className="education-profile-grid">
-
               <div className="education-detail">
-                <span className="record-label">DURATION</span>
+                <span>DURATION</span>
                 <p>July 2023 — June 2027</p>
               </div>
 
               <div className="education-detail education-cgpa">
-                <span className="record-label">CGPA</span>
-
+                <span>CGPA</span>
                 <p>
-                  <strong>8.56</strong>
+                  <strong>8.6</strong>
                   <span>/ 10</span>
                 </p>
               </div>
-
             </div>
 
-            {/* TIMELINE */}
             <div className="education-timeline">
-
               <div className="timeline-labels">
                 <span>2023</span>
+                <span>2026</span>
                 <span>2027</span>
               </div>
 
               <div className="timeline-track">
                 <span className="timeline-progress" />
-                <span className="timeline-start" />
-                <span className="timeline-current" />
-                <span className="timeline-end" />
+                <i className="timeline-start" />
+                <i className="timeline-current" />
+                <i className="timeline-end" />
               </div>
 
               <div className="timeline-caption">
                 <span>START</span>
+                <span>CURRENT</span>
                 <span>EXPECTED GRADUATION</span>
               </div>
-
             </div>
 
-          </div>
+            <strong className="education-ghost" aria-hidden="true">27</strong>
+          </aside>
         </div>
-
       </div>
     </section>
   );

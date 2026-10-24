@@ -4,17 +4,17 @@ export default function Skills() {
   return (
     <section className="section skills-section" id="skills">
       <div className="section-container">
-
         <header className="section-heading skills-heading">
-          <span className="section-number coral">04</span>
-
-          <div>
+          <div className="section-heading-meta">
+            <span className="section-number coral">04</span>
             <p className="section-kicker">HOW I BUILD</p>
-            <h2>Technical Toolkit</h2>
+          </div>
 
+          <div className="skills-heading-content">
+            <h2>Technical Toolkit<span className="heading-accent">.</span></h2>
             <p className="section-intro">
-              Technologies I use to build intelligent systems,
-              from models and retrieval to APIs and deployment.
+              Technologies I use to build intelligent systems, from models
+              and retrieval to APIs, interfaces and deployment.
             </p>
           </div>
         </header>
@@ -28,12 +28,10 @@ export default function Skills() {
                 className={`skill-group skill-${group.accent}`}
                 key={group.title}
               >
-                {/* Decorative ghost number */}
                 <span className="skill-ghost-number" aria-hidden="true">
                   {number}
                 </span>
 
-                {/* Top */}
                 <div className="skill-card-top">
                   <span className="skill-index">{number}</span>
 
@@ -44,7 +42,6 @@ export default function Skills() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="skill-card-content">
                   <h3>{group.title}</h3>
 
@@ -55,7 +52,6 @@ export default function Skills() {
                   </div>
                 </div>
 
-                {/* Bottom decorative line */}
                 <div className="skill-card-line" aria-hidden="true">
                   <span />
                   <i />
@@ -64,7 +60,6 @@ export default function Skills() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

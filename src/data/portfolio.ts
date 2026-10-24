@@ -10,113 +10,65 @@ export type FeaturedProject = {
   github: string;
   live?: string;
 };
+import beliefgraphImage from "../assets/projects/beliefgraph.png";
 import medintelImage from "../assets/projects/medintel.png";
 import learningCompanionImage from "../assets/projects/learning-companion.png";
-import newsClassifierImage from "../assets/projects/news-classifier.png";
 
 export const featuredProjects: FeaturedProject[] = [
   {
-  number: "01",
-  title: "MedIntel AI",
-  category: "Full-Stack AI · RAG · Healthcare",
-
-  description:
-    "An AI-powered healthcare assistant combining medical report analysis, retrieval-augmented generation, conversational AI, and backend services in one intelligent platform.",
-
-  built: [
-    "RAG-powered medical knowledge retrieval",
-    "Medical report analysis and OCR workflows",
-    "Conversational AI with LLM integration",
-    "FastAPI backend with persistent application data",
-  ],
-
-  stack: [
-    "React",
-    "TypeScript",
-    "FastAPI",
-    "LangChain",
-    "RAG",
-    "PostgreSQL",
-    "Groq",
-    "OCR",
-  ],
-
-  accent: "coral",
-
-  image: medintelImage,
-
-  github: "https://github.com/Simi268/Medintel-AI",
-  live: "https://medintel-ai-f9gv.vercel.app/",
-},
-
+    number: "01",
+    title: "BeliefGraph",
+    category: "AI Systems · Dependency Graphs · Backend",
+    description:
+      "A dependency-aware recovery system for AI-agent workflows. It tracks how beliefs, conclusions, plans, and actions depend on one another so changed assumptions can trigger targeted recovery rather than a full restart.",
+    built: [
+      "Dependency graph and downstream impact analysis",
+      "Selective invalidation and recovery of affected nodes",
+      "FastAPI REST endpoints with Pydantic models",
+      "Automated tests and controlled benchmark evaluation",
+    ],
+    stack: ["Python", "FastAPI", "Pydantic", "PostgreSQL", "Docker", "Pytest", "React", "TypeScript"],
+    accent: "coral",
+    image: beliefgraphImage,
+    github: "https://github.com/Simi268/belief-graph",
+    live: "https://beliefgraph-frontend.onrender.com/",
+  },
   {
-  number: "02",
-  title: "AI Learning Companion",
-  category: "LLM · RAG · Semantic Retrieval",
-
-  description:
-    "A document-aware AI learning assistant that retrieves relevant context from uploaded material before generating grounded, context-aware responses.",
-
-  built: [
-    "Document ingestion and chunking pipeline",
-    "Vector embeddings and semantic retrieval",
-    "ChromaDB-backed vector storage",
-    "LLM orchestration and contextual response generation",
-  ],
-
-  stack: [
-    "LangChain",
-    "RAG",
-    "ChromaDB",
-    "SentenceTransformers",
-    "Groq",
-    "Streamlit",
-  ],
-
-  accent: "lavender",
-
-  image: learningCompanionImage,
-
-  github:
-    "https://github.com/Simi268/ai-learning-companion-rag",
-
-  live:
-    "https://ai-learning-companion-rag-bgbu6sdwaaixj59evf7t2u.streamlit.app/",
-},
-
+    number: "02",
+    title: "MedIntel AI",
+    category: "Full-Stack AI · RAG · Healthcare",
+    description:
+      "A healthcare intelligence application combining medical document processing, retrieval-augmented generation, conversational AI, and backend services.",
+    built: [
+      "Medical report interpretation and document extraction",
+      "RAG pipeline for context-aware responses from uploaded documents",
+      "OCR processing with Tesseract and PyMuPDF",
+      "FastAPI services, database persistence, and conversation history",
+    ],
+    stack: ["React", "TypeScript", "FastAPI", "LangChain", "PostgreSQL", "Groq API", "Tesseract OCR", "PyMuPDF"],
+    accent: "lavender",
+    image: medintelImage,
+    github: "https://github.com/Simi268/Medintel-AI",
+    live: "https://medintel-ai-f9gv.vercel.app/",
+  },
   {
-  number: "03",
-  title: "News Classifier",
-  category: "NLP · Transformers · BERT",
-
-  description:
-    "A transformer-based NLP application that classifies news articles into categories using a fine-tuned BERT model.",
-
-  built: [
-    "News text preprocessing and tokenization",
-    "Fine-tuned BERT classification model",
-    "Training and evaluation pipeline",
-    "Interactive inference workflow",
-  ],
-
-  stack: [
-    "BERT",
-    "Transformers",
-    "PyTorch",
-    "Hugging Face",
-    "NLP",
-    "Python",
-  ],
-
-  accent: "sage",
-
-  image: newsClassifierImage,
-
-  github: "https://github.com/Simi268/News-classifier",
-
-  live:
-    "https://huggingface.co/spaces/Simik26/news-classifier-app",
-},
+    number: "03",
+    title: "AI Learning Companion",
+    category: "LLM · RAG · Semantic Retrieval",
+    description:
+      "A document-aware learning assistant that retrieves relevant context from uploaded PDFs before generating grounded answers.",
+    built: [
+      "PDF ingestion, document chunking, and embedding generation",
+      "ChromaDB vector storage and semantic similarity search",
+      "Sentence Transformers embeddings",
+      "Groq LLM response generation grounded in retrieved content",
+    ],
+    stack: ["Python", "LangChain", "ChromaDB", "Sentence Transformers", "Groq API", "Streamlit"],
+    accent: "sage",
+    image: learningCompanionImage,
+    github: "https://github.com/Simi268/ai-learning-companion-rag",
+    live: "https://ai-learning-companion-rag-bgbu6sdwaaixj59evf7t2u.streamlit.app/",
+  },
 ];
 
 /* =========================================================
@@ -125,12 +77,13 @@ export const featuredProjects: FeaturedProject[] = [
 
 export const moreProjects = [
   {
-    title: "KORVIX",
-    category: "AI Systems",
+    title: "AI News Classifier",
+    category: "NLP · Transformer Classification",
     description:
-      "An AI execution system designed to transform meetings, decisions, and commitments into structured, accountable workflows.",
-    stack: ["AI", "LLMs", "FastAPI", "React"],
-    github: "https://github.com/Simi268/KORVIX",
+      "A BERT-based news classification application that predicts news categories from text, with preprocessing, tokenization, inference, and a deployed interactive demo.",
+    stack: ["Python", "PyTorch", "BERT", "Hugging Face Transformers", "Streamlit"],
+    github: "https://github.com/Simi268/News-classifier",
+    live: "https://huggingface.co/spaces/Simi26/news-classifier-app",
   },
 
   {
@@ -244,75 +197,109 @@ export const moreProjects = [
 
 export const skillGroups = [
   {
-    title: "Languages",
-    skills: ["Python", "SQL"],
+    title: "Programming & Core CS",
     accent: "coral",
+    skills: [
+      "Python",
+      "JavaScript",
+      "SQL",
+      "C++",
+      "OOP",
+      "Data Structures & Algorithms",
+      "Problem Solving",
+      "DBMS"
+    ]
   },
 
   {
-    title: "AI / Machine Learning",
+    title: "Frontend Development",
+    accent: "lavender",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React.js",
+      "Tailwind CSS",
+      "Responsive Design",
+      "REST API Integration"
+    ]
+  },
+
+  {
+    title: "Backend & APIs",
+    accent: "blue",
+    skills: [
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "RESTful APIs",
+      "API Integration",
+      "Backend Development",
+      "Authentication",
+      "Application Architecture"
+    ]
+  },
+
+  {
+    title: "Databases & Data",
+    accent: "green",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "SQL",
+      "Database Design",
+      "CRUD Operations",
+      "Data Modeling"
+    ]
+  },
+
+  {
+    title: "AI & Machine Learning",
+    accent: "orange",
     skills: [
       "Machine Learning",
       "Deep Learning",
       "NLP",
-      "Transformers",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
       "BERT",
-    ],
-    accent: "lavender",
+      "Hugging Face Transformers",
+      "Pandas",
+      "NumPy"
+    ]
   },
 
   {
-    title: "Generative AI",
+    title: "Generative AI & LLMs",
+    accent: "pink",
     skills: [
       "LLMs",
       "RAG",
       "LangChain",
+      "Groq API",
+      "SentenceTransformers",
       "Vector Embeddings",
       "Semantic Search",
-      "SentenceTransformers",
-    ],
-    accent: "sage",
-  },
-
-  {
-    title: "ML & Data Stack",
-    skills: [
-      "PyTorch",
-      "TensorFlow",
-      "Scikit-learn",
-      "Hugging Face",
-      "Pandas",
-      "NumPy",
-    ],
-    accent: "peach",
-  },
-
-  {
-    title: "Backend & Data",
-    skills: [
-      "FastAPI",
-      "REST APIs",
-      "PostgreSQL",
-      "SQLite",
       "ChromaDB",
-    ],
-    accent: "coral",
+      "Prompt Engineering"
+    ]
   },
 
   {
-    title: "Tools",
+    title: "Development & Deployment",
+    accent: "yellow",
     skills: [
       "Git",
       "GitHub",
       "Docker",
-      
       "Streamlit",
-      "Render",
-      "Vercel",
       "Hugging Face Spaces",
-    ],
-    accent: "lavender",
-  },
+      "Vercel",
+      "API Testing",
+      "Debugging"
+    ]
+  }
 ];
 
 /* =========================================================
@@ -320,29 +307,27 @@ export const skillGroups = [
    ========================================================= */
 export const certifications = [
   {
-    title: "Data Science with Python",
-    issuer: "Internshala",
+    title: "Generative AI with LangChain and Hugging Face",
+    issuer: "Udemy · Jun 2026",
     type: "Certification",
-    status: "Credential Earned",
-    link: null, // we'll add the certificate later
+    status: "Completed",
+    link: null,
     accent: "coral",
   },
-
   {
-    title: "Complete Data Science and Machine Learning",
-    issuer: "Independent Learning",
+    title: "Data Science and Machine Learning",
+    issuer: "Independent Learning · Dec 2025",
     type: "Coursework",
-    status: "Course Completed",
+    status: "Completed",
     link: null,
     accent: "lavender",
   },
-
   {
-    title: "Complete Generative AI",
-    issuer: "Udemy",
+    title: "Data Science with AI",
+    issuer: "Internshala Trainings · Jul 2025",
     type: "Certification",
-    status: "Credential Earned",
-    link: null, // we'll add certificate later
+    status: "Completed",
+    link: null,
     accent: "sage",
   },
 ];

@@ -2,230 +2,92 @@ import { featuredProjects } from "../data/portfolio";
 
 export default function FeaturedProjects() {
   return (
-    <section
-      className="section projects-section"
-      id="projects"
-    >
+    <section className="section projects-section" id="projects">
       <div className="section-container">
-
-        {/* SECTION HEADER */}
-        <header className="section-heading project-heading">
-          <span className="section-number sage">
-            03
-          </span>
-
-          <div>
-            <p className="section-kicker">
-              SELECTED WORK
-            </p>
-
-            <h2>Featured Projects</h2>
-
+        <header className="section-heading">
+          <div className="section-heading-meta">
+            <span className="section-number sage">03</span>
+            <p className="section-kicker">SELECTED WORK</p>
+          </div>
+          <div className="project-heading-content">
+            <h2>Featured Projects<span className="heading-accent">.</span></h2>
             <p className="section-intro">
-              Selected systems demonstrating depth across AI,
-              retrieval, NLP and backend engineering.
+              A selection of systems I have built across backend engineering,
+              AI applications, retrieval, and intelligent workflows.
             </p>
           </div>
         </header>
 
-        {/* FEATURED PROJECTS */}
         <div className="featured-projects">
-
           {featuredProjects.map((project, index) => (
             <article
-              key={project.title}
+              className={`featured-project ${index % 2 === 1 ? "project-reverse" : ""}`}
               data-project={project.number}
-              className={`featured-project ${
-                index % 2 !== 0 ? "project-reverse" : ""
-              }`}
+              key={project.title}
             >
-
-              {/* =========================
-                  PROJECT SCREENSHOT
-              ========================== */}
-
-              <div
-                className={`project-media accent-${project.accent}`}
-              >
+              <div className={`project-media project-media-${project.accent}`}>
                 {project.image ? (
-
                   <a
+                    className="project-image-link"
                     href={project.live || project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="project-image-link"
-                    aria-label={
-                      project.live
-                        ? `View live demo of ${project.title}`
-                        : `View ${project.title} on GitHub`
-                    }
+                    aria-label={`Open ${project.title}`}
                   >
-                    <img
-                      src={project.image}
-                      alt={`${project.title} application preview`}
-                      loading="lazy"
-                    />
-
-                    <div className="project-image-overlay">
-                      <span>
-                        {project.live
-                          ? "View Live Project ↗"
-                          : "View on GitHub ↗"}
-                      </span>
+                    <div className="project-frame">
+                      <img src={project.image} alt={`${project.title} application preview`} loading="lazy" />
+                      <span className="project-frame-shine" />
+                      <span className="project-view"><span>EXPLORE PROJECT</span><span>↗</span></span>
                     </div>
                   </a>
-
                 ) : (
-
-                  /* FALLBACK IF SCREENSHOT IS NOT ADDED */
-
                   <div className="project-placeholder">
-
-                    <div className="placeholder-top">
-                      <span>{project.number}</span>
-                      <span>PROJECT PREVIEW</span>
+                    <span className="placeholder-number">{project.number} / SELECTED PROJECT</span>
+                    <div className="placeholder-center">
+                      <span className="placeholder-ring ring-a" />
+                      <span className="placeholder-ring ring-b" />
+                      <span className="placeholder-core" />
                     </div>
-
-                    <div className="placeholder-art">
-
-                      <span className="placeholder-orb" />
-
-                      <span className="placeholder-line line-one" />
-
-                      <span className="placeholder-line line-two" />
-
-                      <strong>
-                        {project.title
-                          .split(" ")
-                          .map((word) => word[0])
-                          .join("")}
-                      </strong>
-
-                    </div>
-
-                    <p>Project preview</p>
-
+                    <span className="placeholder-label">DEPENDENCIES · RECOVERY · SYSTEMS</span>
                   </div>
                 )}
               </div>
 
-
-              {/* =========================
-                  PROJECT CONTENT
-              ========================== */}
-
               <div className="project-content">
-
-                {/* PROJECT META */}
-
                 <div className="project-meta">
                   <span>{project.number}</span>
-                  <span>{project.category}</span>
+                  <span className="project-category">{project.category}</span>
                 </div>
-
-
-                {/* PROJECT TITLE */}
-
-                <h3>
-                  {project.title}
-                </h3>
-
-
-                {/* DESCRIPTION */}
-
-                <p className="project-description">
-                  {project.description}
-                </p>
-
-
-                {/* WHAT I BUILT */}
+                <h3>{project.title}</h3>
+                <p className="project-description">{project.description}</p>
 
                 <div className="project-built">
-
-                  <span className="project-small-title">
-                    WHAT I BUILT
-                  </span>
-
+                  <span className="project-small-title">WHAT I BUILT</span>
                   <ul>
                     {project.built.map((item) => (
-                      <li key={item}>
-                        {item}
-                      </li>
+                      <li key={item}><span className="project-detail-mark">↗</span><span>{item}</span></li>
                     ))}
                   </ul>
-
                 </div>
-
-
-                {/* TECH STACK */}
 
                 <div className="project-stack">
-
-                  {project.stack.map((tech) => (
-                    <span key={tech}>
-                      {tech}
-                    </span>
-                  ))}
-
+                  {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
                 </div>
-
-
-                {/* =========================
-                    PROJECT ACTIONS
-                ========================== */}
 
                 <div className="project-links">
-
-                  {/* LIVE DEMO */}
-
+                  <a className="project-link" href={project.github} target="_blank" rel="noreferrer">
+                    GitHub <span>↗</span>
+                  </a>
                   {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="project-link project-link-live"
-                      aria-label={`View live demo of ${project.title}`}
-                    >
-                      <span>
-                        Live Demo
-                      </span>
-
-                      <span aria-hidden="true">
-                        ↗
-                      </span>
+                    <a className="project-link" href={project.live} target="_blank" rel="noreferrer">
+                      Live Demo <span>↗</span>
                     </a>
                   )}
-
-
-                  {/* GITHUB */}
-
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="project-link project-link-github"
-                      aria-label={`View ${project.title} on GitHub`}
-                    >
-                      <span>
-                        GitHub
-                      </span>
-
-                      <span aria-hidden="true">
-                        ↗
-                      </span>
-                    </a>
-                  )}
-
                 </div>
-
               </div>
-
             </article>
           ))}
-
         </div>
-
       </div>
     </section>
   );

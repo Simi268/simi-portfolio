@@ -1,34 +1,97 @@
 export default function Hero() {
   return (
     <section className="hero" id="home">
+      <div className="hero-wallpaper" aria-hidden="true">
+        <div className="wallpaper-grid" />
+        <div className="wallpaper-orb wallpaper-orb-one" />
+        <div className="wallpaper-orb wallpaper-orb-two" />
+        <div className="wallpaper-orb-three" />
+        <div className="wallpaper-orbit wallpaper-orbit-one" />
+        <div className="wallpaper-orbit wallpaper-orbit-two" />
+        <div className="wallpaper-line wallpaper-line-one" />
+        <div className="wallpaper-line wallpaper-line-two" />
+        <span className="wallpaper-index">AI SYSTEMS · 01</span>
+        <span className="wallpaper-caption">FROM REASONING TO RELIABLE SOFTWARE</span>
+      </div>
+
       <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-status"><span className="status-dot" />Open to AI/ML & Backend AI opportunities</div>
-          <p className="eyebrow"><strong className="role-ai">AI/ML ENGINEER</strong><span /><strong className="role-backend">AI BACKEND ENGINEER</strong></p>
-          <h1>Hi , I'm </h1>
-          <h1>Simi <span className="name"> Kumari.</span></h1>
-          <h2>Building intelligent systems<br />from <span className="highlight">models to products.</span></h2>
-          <p className="hero-description">I build AI applications across machine learning, LLMs, RAG and backend engineering — connecting intelligent models with retrieval, APIs and reliable software systems.</p>
-          <div className="hero-actions"><a href="#projects" className="primary-btn">Explore my work <span>↘</span></a><a href="/resume.pdf" target="_blank" className="secondary-btn">View resume <span>↗</span></a></div>
-          <div className="hero-socials"><a href="https://github.com/Simi268" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/simi-kumari-46865b37b/">LinkedIn ↗</a></div>
+          <div className="hero-status">
+            <span className="status-dot" />
+            <span>Open to software development &amp; AI/ML opportunities</span>
+          </div>
+
+          <div className="hero-role">
+            <span>AGENTIC AI SYSTEMS</span><i /><span>BACKEND ENGINEERING</span>
+          </div>
+
+          <h1 className="hero-title">
+            <span className="hero-title-intro">Hi, I&apos;m</span>
+            <span className="hero-title-name">Simi <em>Kumari.</em></span>
+          </h1>
+
+          <h2 className="hero-headline">
+            I build <span>agentic AI systems</span> and intelligent backends.
+          </h2>
+
+          <p className="hero-description">
+            From <strong>BeliefGraph&apos;s dependency-aware agent recovery</strong> to
+            retrieval-grounded RAG applications, I turn LLM capabilities into
+            reliable software—with Python, FastAPI, evaluation, and production-minded
+            engineering at the core.
+          </p>
+
+          <div className="hero-proof-points" aria-label="Core focus areas">
+            <span><i /> Agent systems</span>
+            <span><i /> RAG &amp; retrieval</span>
+            <span><i /> Production AI</span>
+          </div>
+
+          <div className="hero-actions">
+            <a href="#projects" className="hero-primary"><span>Explore my work</span><b>↗</b></a>
+            <a href="/SIMI_RESUME.pdf" target="_blank" rel="noreferrer" className="hero-secondary"><span>View resume</span><b>↗</b></a>
+          </div>
+
+          <div className="hero-socials">
+            <span className="social-intro">Find me on</span>
+            <a href="https://github.com/Simi268" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+            <a href="https://www.linkedin.com/in/simi-kumari-46865b37b/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          </div>
         </div>
 
-        <div className="system-visual" aria-hidden="true">
-          <div className="system-aura aura-one" /><div className="system-aura aura-two" />
-          <svg className="system-lines" viewBox="0 0 520 420" preserveAspectRatio="none">
-            <path d="M92 112 C170 112 180 202 260 202" /><path d="M92 300 C170 300 180 218 260 218" />
-            <path d="M304 210 C365 210 360 122 430 122" /><path d="M304 210 C365 210 360 306 430 306" />
-          </svg>
-          <div className="system-node node-data"><small>01</small><span>DATA</span></div>
-          <div className="system-node node-retrieval"><small>02</small><span>RETRIEVAL</span></div>
-          <div className="system-node node-llm"><small>03</small><span>LLM</span><b>INTELLIGENCE</b></div>
-          <div className="system-node node-api"><small>04</small><span>API</span></div>
-          <div className="system-node node-product"><small>05</small><span>PRODUCT</span></div>
-          <span className="flow-dot flow-one" /><span className="flow-dot flow-two" /><span className="flow-dot flow-three" />
-          <div className="system-caption"><span>AI SYSTEM / 2026</span><span>RETRIEVAL → INTELLIGENCE → PRODUCT</span></div>
+        <div className="hero-agent-visual" aria-label="Abstract agentic AI system visualization">
+          <div className="agent-visual-label agent-label-top"><span className="agent-live-dot" /> SYSTEM STATUS / ACTIVE</div>
+          <div className="agent-orbit agent-orbit-a" />
+          <div className="agent-orbit agent-orbit-b" />
+          <div className="agent-orbit agent-orbit-c" />
+          <div className="agent-connection agent-connection-one" />
+          <div className="agent-connection agent-connection-two" />
+          <div className="agent-connection agent-connection-three" />
+          <div className="agent-node agent-node-one"><span>PLAN</span><b>01</b></div>
+          <div className="agent-node agent-node-two"><span>RETRIEVE</span><b>02</b></div>
+          <div className="agent-node agent-node-three"><span>REASON</span><b>03</b></div>
+          <div className="agent-node agent-node-four"><span>EXECUTE</span><b>04</b></div>
+          <div className="agent-prism-halo" />
+          <div className="agent-prism">
+            <div className="agent-prism-inner">
+              <div className="prism-glyph" aria-hidden="true"><span /><span /><span /><i /></div>
+              <div className="prism-wordmark">AGENT <b>CORE</b></div>
+              <div className="prism-caption">ORCHESTRATE · OBSERVE · IMPROVE</div>
+            </div>
+          </div>
+          <div className="agent-float-card agent-card-memory"><span className="agent-card-icon">⌘</span><span><b>Memory graph</b><small>Context connected</small></span><i /></div>
+          <div className="agent-float-card agent-card-eval"><span className="agent-card-icon">✓</span><span><b>Evaluation</b><small>Outputs verified</small></span><i /></div>
+          <div className="agent-float-card agent-card-tools"><span className="agent-card-icon">↗</span><span><b>Tool execution</b><small>Actions orchestrated</small></span><i /></div>
+          <div className="agent-visual-label agent-label-bottom">INTELLIGENCE, WITH ENGINEERING AT ITS CORE <span>✳</span></div>
         </div>
       </div>
-      <div className="hero-bottom"><span>PYTHON</span><span>LLMs</span><span>RAG</span><span>LANGCHAIN</span><span>FASTAPI</span><span>POSTGRESQL</span></div>
+
+      <div className="hero-bottom">
+        <div className="hero-bottom-title">TOOLS &amp; IDEAS</div>
+        <span>Python</span><span>FastAPI</span><span>LLMs</span><span>RAG</span>
+        <span>React / TypeScript</span><span>PostgreSQL</span><span>Vector Search</span><span>Pytest</span>
+        <div className="hero-bottom-end"><i /> FROM PROTOTYPE TO PRODUCT</div>
+      </div>
     </section>
   );
 }
